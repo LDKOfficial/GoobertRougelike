@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: ff5658057c186514589e7dee576cbf97
+guid: 99a17ee71cf74cc428045b318f8749fc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4089861788565535864
-    second: Big_Goobert_0
+      213: -2802554261367395127
+    second: CloudEnemy1SpriteSheet_0
   - first:
-      213: 7238998081462988276
-    second: Big_Goobert_1
+      213: 488784016294547606
+    second: CloudEnemy1SpriteSheet_1
   - first:
-      213: 5266334296682473510
-    second: Big_Goobert_2
-  - first:
-      213: -6149813434416500377
-    second: Big_Goobert_3
+      213: 9173433177669745698
+    second: CloudEnemy1SpriteSheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -135,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Big_Goobert_0
+      name: CloudEnemy1SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 28
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87c74efa0ab12c830800000000000000
-      internalID: 4089861788565535864
+      spriteID: 9cc60737fb35b19d0800000000000000
+      internalID: -2802554261367395127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Goobert_1
+      name: CloudEnemy1SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 0
-        width: 28
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4fde557b666167460800000000000000
-      internalID: 7238998081462988276
+      spriteID: 690102f197288c600800000000000000
+      internalID: 488784016294547606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Goobert_2
+      name: CloudEnemy1SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 0
-        width: 28
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,30 +191,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 628273ef327c51940800000000000000
-      internalID: 5266334296682473510
+      spriteID: 22cb9c54fd49e4f70800000000000000
+      internalID: 9173433177669745698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Goobert_3
+      name: CloudEnemy1SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 97
+        x: 96
         y: 0
-        width: 28
-        height: 24
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 761fda6b34977aaa0800000000000000
-      internalID: -6149813434416500377
+      spriteID: 533fe9700c206ab47bab0e96454a69f8
+      internalID: 1880534
       vertices: []
       indices: 
       edges: []
@@ -226,7 +223,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a048fc55498cf104f946d10848ddd45d
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +233,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Big_Goobert_0: 4089861788565535864
-      Big_Goobert_1: 7238998081462988276
-      Big_Goobert_2: 5266334296682473510
-      Big_Goobert_3: -6149813434416500377
+      CloudEnemy1SpriteSheet_0: -2802554261367395127
+      CloudEnemy1SpriteSheet_1: 488784016294547606
+      CloudEnemy1SpriteSheet_2: 9173433177669745698
+      CloudEnemy1SpriteSheet_3: 1880534
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
