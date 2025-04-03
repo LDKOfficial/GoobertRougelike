@@ -5,8 +5,7 @@ using UnityEngine.Scripting.APIUpdating;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float moveSpeed;
-
+    private PlayerStats stats;
     private new Rigidbody2D rigidbody;
     private Vector2 movementInput;
 
@@ -17,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidbody.linearVelocity = movementInput * moveSpeed;
+        rigidbody.linearVelocity = movementInput * stats.moveSpeed;
     }
 
     public void Move(InputAction.CallbackContext context)

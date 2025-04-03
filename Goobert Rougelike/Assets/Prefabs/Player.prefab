@@ -170,9 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4863fd14f6273be4793af363b210f675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 3672349567736982348}
   animator: {fileID: 8608033313765886497}
-  meleeSpeed: 1
-  damage: 50
 --- !u!1 &7736625141718957257
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,9 +229,10 @@ GameObject:
   - component: {fileID: 135732642154478004}
   - component: {fileID: 7213536878951227973}
   - component: {fileID: 2027632558690473080}
+  - component: {fileID: 3672349567736982348}
   - component: {fileID: 174837342638009569}
   - component: {fileID: 361016173954937408}
-  - component: {fileID: 2045448997281803805}
+  - component: {fileID: 3036277355857765803}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -323,7 +323,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100000
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -384,6 +384,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.72121286, y: 0.56726503}
   m_EdgeRadius: 0
+--- !u!114 &3672349567736982348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803293562945874126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303d9dbb75c816442a9cbbc913b37683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+  damage: 10
+  moveSpeed: 5
+  hitPoints: 100
 --- !u!114 &174837342638009569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,26 +530,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340e39bf9d243ca4e908840057216def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
---- !u!95 &2045448997281803805
-Animator:
-  serializedVersion: 7
+  stats: {fileID: 3672349567736982348}
+--- !u!114 &3036277355857765803
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8803293562945874126}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 72ad604af6ee27147aa89cd6bb38c18f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae4cb9e47808674ab6db83f3dab5a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 3672349567736982348}

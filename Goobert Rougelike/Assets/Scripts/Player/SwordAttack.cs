@@ -4,15 +4,11 @@ using UnityEngine;
 public class SwordAttack : MonoBehaviour
 {
 
+    [SerializeField]
+    private PlayerStats stats;
 
     [SerializeField]
     private Animator animator;
-
-    [SerializeField]
-    private float meleeSpeed;
-
-    [SerializeField]
-    private float damage;
 
     private float timeUntilMelee;
 
@@ -26,7 +22,7 @@ public class SwordAttack : MonoBehaviour
         if (timeUntilMelee <= 0f)
         {
             animator.SetTrigger("Attack");
-            timeUntilMelee = meleeSpeed;
+            timeUntilMelee = stats.attackSpeed;
         }
     }
 
@@ -35,7 +31,7 @@ public class SwordAttack : MonoBehaviour
         if (collider.tag == "Enemy")
         {
             Debug.Log("Enemy Hit");
-            collider.GetComponent<Enemy>().TakeDamage(damage);
+            collider.GetComponent<Enemy>().TakeDamage(stats.damage);
         }
     }
 
