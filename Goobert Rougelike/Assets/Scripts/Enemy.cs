@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 direction = player.transform.position - transform.position;
+        direction.Normalize();
 
         enemyRigidbody.linearVelocity = direction * moveSpeed;
     }
