@@ -1,0 +1,16 @@
+.header {
+    font-size: 60px;
+    -unity-text-align: upper-center;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    top: 5%;
+}
+
+.button {
+    font-size: 55px;
+    width: 600px;
+    height: 860px;
+    top: 14%;
+    position: absolute;
+}

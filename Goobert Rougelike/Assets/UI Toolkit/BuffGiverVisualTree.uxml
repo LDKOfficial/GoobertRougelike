@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/BuffGiverStylesheet.uss?fileID=7433441132597879392&amp;guid=d313b880b682dcb4ba0e96cddab01445&amp;type=3#BuffGiverStylesheet" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label text="Level up!" name="LevelUp" class="header" style="scale: 1 1;" />
+        <ui:Button text="Button" name="Buff1" class="button" style="left: 30px;" />
+        <ui:Button text="Button" name="Buff2" class="button" style="left: 660px;" />
+        <ui:Button text="Button" name="Buff3" class="button" style="left: 1290px;" />
+    </ui:VisualElement>
+</ui:UXML>

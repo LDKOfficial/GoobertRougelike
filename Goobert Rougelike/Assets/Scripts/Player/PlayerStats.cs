@@ -12,5 +12,14 @@ public class PlayerStats : MonoBehaviour
     public float moveSpeed;
 
     [SerializeField]
+    public int maxHitPoints;
+
+    [SerializeField]
     public int hitPoints;
+
+    [SerializeField]
+    public int xpPoints;
+
+    [SerializeField]
+    public float xpToNextBuff;
 }
