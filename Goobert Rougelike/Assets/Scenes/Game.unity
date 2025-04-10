@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &73625336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3672349567736982348, guid: 55ed9d065bfdc8846b6467c51cffa626, type: 3}
+  m_PrefabInstance: {fileID: 3200062903350206823}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303d9dbb75c816442a9cbbc913b37683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &245483121
 GameObject:
   m_ObjectHideFlags: 0
@@ -38785,6 +38796,7 @@ GameObject:
   - component: {fileID: 445437645}
   - component: {fileID: 445437644}
   - component: {fileID: 445437646}
+  - component: {fileID: 445437647}
   m_Layer: 5
   m_Name: BuffGiverScreen
   m_TagString: Untagged
@@ -38838,8 +38850,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f584b7f729eed64bac195eeb269bf74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 0}
-  buffs: []
+  stats: {fileID: 73625336}
+  buffs:
+  - {fileID: 5673046732473566522, guid: 4b71eca1126e7a943afd5f7fdfa3dcdf, type: 3}
+  - {fileID: 2271954903942274245, guid: 341ba2123bfd1d34fb291a9bab1914f4, type: 3}
+  - {fileID: 5765019528493970957, guid: 871bd18fa0d3d464095401970225330e, type: 3}
+  - {fileID: 5712586481612734304, guid: c611c2dfc87da1446a80bbd4340f25b0, type: 3}
+  animator: {fileID: 445437647}
+--- !u!95 &445437647
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445437643}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f50ce61e09cfdc47b8b1c7589a27c1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -39100,11 +39139,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3672349567736982348, guid: 55ed9d065bfdc8846b6467c51cffa626, type: 3}
       propertyPath: damage
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3672349567736982348, guid: 55ed9d065bfdc8846b6467c51cffa626, type: 3}
       propertyPath: attackSpeed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3672349567736982348, guid: 55ed9d065bfdc8846b6467c51cffa626, type: 3}
+      propertyPath: xpToNextBuff
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7178442538431931769, guid: 55ed9d065bfdc8846b6467c51cffa626, type: 3}
       propertyPath: m_LocalPosition.x

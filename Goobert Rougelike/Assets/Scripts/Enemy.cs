@@ -1,3 +1,4 @@
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -13,7 +14,12 @@ public class Enemy : MonoBehaviour
     private int damage;
 
     [SerializeField]
+    private int xpAmount;
+
+    [SerializeField]
     private Rigidbody2D enemyRigidbody;
+
+    private PlayerStats stats;
 
     private GameObject player;
 
@@ -44,6 +50,7 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0f)
         {
+            player.gameObject.GetComponent<PlayerStats>().xpPoints += xpAmount;
             Destroy(gameObject);
             Debug.Log("Enemy Died");
         }

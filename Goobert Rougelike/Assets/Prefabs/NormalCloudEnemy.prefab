@@ -179,6 +179,7 @@ MonoBehaviour:
   health: 100
   moveSpeed: 2.5
   damage: 10
+  xpAmount: 100
   enemyRigidbody: {fileID: 2292360421139967108}
 --- !u!58 &6830052131325344403
 CircleCollider2D:

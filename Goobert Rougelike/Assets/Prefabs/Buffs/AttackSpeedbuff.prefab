@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: more attack speed, lowers damage
-  attackSpeedChange: 0.5
+  attackSpeedChange: -0.5
   damageChange: -1
   moveSpeedChange: 0
   maxHitPointsChange: 0
