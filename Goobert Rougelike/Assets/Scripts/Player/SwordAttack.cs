@@ -30,7 +30,6 @@ public class SwordAttack : MonoBehaviour
     {
         if (collider.tag == "Enemy")
         {
-            Debug.Log("Enemy Hit");
             collider.GetComponent<Enemy>().TakeDamage(stats.damage);
         }
     }

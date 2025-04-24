@@ -11,7 +11,7 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (stats.hitPoints <= 0)
         {
-            Debug.Log("Player has died");
+            // do smth to end the game
         }
     }
 }

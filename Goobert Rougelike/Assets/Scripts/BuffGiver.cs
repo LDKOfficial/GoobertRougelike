@@ -9,68 +9,34 @@ public class BuffGiver : MonoBehaviour
     private PlayerStats stats;
 
     [SerializeField]
-    private List<GameObject> buffs;
+    private GameObject uI;
 
     [SerializeField]
-    private Animator animator;
+    private List<GameObject> buffs;
 
     private GameObject buff1;
     private GameObject buff2;
     private GameObject buff3;
 
-    private UIDocument uiDocument;
-
-    private List<Button> buffGiverButtons = new List<Button>();
-    private Button button1;
-    private Button button2;
-    private Button button3;
-
-
-
-    private void Awake()
-    {
-        uiDocument = GetComponent<UIDocument>();
-
-        button1 = uiDocument.rootVisualElement.Q("Buff1") as Button;
-        button2 = uiDocument.rootVisualElement.Q("Buff2") as Button;
-        button3 = uiDocument.rootVisualElement.Q("Buff3") as Button;
-
-        button1.RegisterCallback<ClickEvent>(GiveBuff1);
-        button2.RegisterCallback<ClickEvent>(GiveBuff2);
-        button3.RegisterCallback<ClickEvent>(GiveBuff3);
-
-        buffGiverButtons = uiDocument.rootVisualElement.Query<Button>().ToList();
-
-        for (int iterator = 0; iterator < buffGiverButtons.Count; iterator++)
-        {
-            //buffGiverButtons[iterator].RegisterCallback<ClickEvent>();
-        }
-
-    }
     private void FixedUpdate()
     {
         if (stats.xpPoints >= stats.xpToNextBuff)
         {
+            Debug.Log("Level up");
+
+            uI.SetActive(true);
+
             stats.xpPoints = 0;
             stats.xpToNextBuff = stats.xpToNextBuff * 1.1f;
+            buff1 = buffs[Random.Range(0,buffs.Count - 1)];
+            buff2 = buffs[Random.Range(0,buffs.Count - 1)];
+            buff3 = buffs[Random.Range(0,buffs.Count - 1)];
 
-            buff1 = buffs[Random.Range(0,buffs.Count)];
-            buff2 = buffs[Random.Range(0,buffs.Count)];
-            buff3 = buffs[Random.Range(0,buffs.Count)];
-
-            animator.SetTrigger("Show");
         }
     }
 
-    private void OnDisable()
-    {
-        button1.UnregisterCallback<ClickEvent>(GiveBuff1);
-        button2.UnregisterCallback<ClickEvent>(GiveBuff2);
-        button3.UnregisterCallback<ClickEvent>(GiveBuff2);
-        //Mikkel: Maybe make more buutons
-    }
 
-    private void GiveBuff1(ClickEvent click)
+    public void GiveBuff1()
     {
         stats.attackSpeed += buff1.gameObject.GetComponent<Buff>().attackSpeedChange;
         stats.damage += buff1.gameObject.GetComponent<Buff>().damageChange;
@@ -79,27 +45,31 @@ public class BuffGiver : MonoBehaviour
         Debug.Log("Button1 pressed");
         Debug.Log(buff1.gameObject.GetComponent<Buff>().name);
 
-        //animator.SetTrigger("Hide");
+        uI.SetActive(false);
     }
 
-    private void GiveBuff2(ClickEvent click)
+    public void GiveBuff2()
     {
         stats.attackSpeed += buff2.gameObject.GetComponent<Buff>().attackSpeedChange;
         stats.damage += buff2.gameObject.GetComponent<Buff>().damageChange;
         stats.maxHitPoints += buff2.gameObject.GetComponent<Buff>().maxHitPointsChange;
         stats.moveSpeed += buff2.gameObject.GetComponent<Buff>().moveSpeedChange;
         Debug.Log("Button2 pressed");
-        animator.SetTrigger("Hide");
+        Debug.Log(buff2.gameObject.GetComponent<Buff>().name);
+
+        uI.SetActive(false);
     }
 
-    private void GiveBuff3(ClickEvent click)
+    public void GiveBuff3()
     {
         stats.attackSpeed += buff3.gameObject.GetComponent<Buff>().attackSpeedChange;
         stats.damage += buff3.gameObject.GetComponent<Buff>().damageChange;
         stats.maxHitPoints += buff3.gameObject.GetComponent<Buff>().maxHitPointsChange;
         stats.moveSpeed += buff3.gameObject.GetComponent<Buff>().moveSpeedChange;
         Debug.Log("Button3 pressed");
-        animator.SetTrigger("Hide");
+        Debug.Log(buff3.gameObject.GetComponent<Buff>().name);
+
+        uI.SetActive(false);
     }
 
 

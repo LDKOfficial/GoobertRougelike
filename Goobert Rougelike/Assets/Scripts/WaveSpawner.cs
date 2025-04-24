@@ -27,7 +27,6 @@ public class WaveSpawner : MonoBehaviour
         for (int iterator = 0; iterator <= numberOfEnemiesToSpawn; iterator++)
         {
         Instantiate(normalCloudEnemy, new Vector3(Random.Range(spawnPointMinimum.position.x, spawnPointMaximum.position.x),Random.Range(spawnPointMinimum.position.y, spawnPointMaximum.position.y), 0), normalCloudEnemy.transform.rotation);
-        Debug.Log("Enemy Spawned");
         }
 
         timeUntilNextWave = timeBetweenWaves;

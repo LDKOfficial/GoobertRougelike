@@ -39,7 +39,6 @@ public class Enemy : MonoBehaviour
     {
                 if (collider.tag == "Player")
         {
-            Debug.Log("Player Hit");
             collider.GetComponent<PlayerHealthManager>().RemoveHealth(damage);
         }
     }
@@ -52,7 +51,6 @@ public class Enemy : MonoBehaviour
         {
             player.gameObject.GetComponent<PlayerStats>().xpPoints += xpAmount;
             Destroy(gameObject);
-            Debug.Log("Enemy Died");
         }
     }
 
