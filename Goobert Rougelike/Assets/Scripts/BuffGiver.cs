@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,6 +12,21 @@ public class BuffGiver : MonoBehaviour
 
     [SerializeField]
     private GameObject uI;
+
+    [SerializeField]
+    private TextMeshProUGUI button1Titel;
+    [SerializeField]
+    private TextMeshProUGUI button1Description;
+
+    [SerializeField]
+    private TextMeshProUGUI button2Titel;
+    [SerializeField]
+    private TextMeshProUGUI button2Description;
+
+    [SerializeField]
+    private TextMeshProUGUI button3Titel;
+    [SerializeField]
+    private TextMeshProUGUI button3Description;
 
     [SerializeField]
     private List<GameObject> buffs;
@@ -32,6 +49,17 @@ public class BuffGiver : MonoBehaviour
             buff2 = buffs[Random.Range(0,buffs.Count - 1)];
             buff3 = buffs[Random.Range(0,buffs.Count - 1)];
 
+            button1Titel.text = buff1.name;
+            button1Description.text = buff1.GetComponent<Buff>().description;
+
+            button2Titel.text = buff2.name;
+            button2Description.text = buff2.GetComponent<Buff>().description;
+
+            button3Titel.text = buff3.name;
+            button3Description.text = buff3.GetComponent<Buff>().description;
+
+            Time.timeScale = 0;
+
         }
     }
 
@@ -46,6 +74,7 @@ public class BuffGiver : MonoBehaviour
         Debug.Log(buff1.gameObject.GetComponent<Buff>().name);
 
         uI.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void GiveBuff2()
@@ -58,6 +87,7 @@ public class BuffGiver : MonoBehaviour
         Debug.Log(buff2.gameObject.GetComponent<Buff>().name);
 
         uI.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void GiveBuff3()
@@ -70,6 +100,7 @@ public class BuffGiver : MonoBehaviour
         Debug.Log(buff3.gameObject.GetComponent<Buff>().name);
 
         uI.SetActive(false);
+        Time.timeScale = 1;
     }
 
 

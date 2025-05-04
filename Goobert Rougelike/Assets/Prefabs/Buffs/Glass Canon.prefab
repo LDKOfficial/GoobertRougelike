@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4012898581817747989}
   - component: {fileID: 1952635828476795362}
   m_Layer: 0
-  m_Name: GlassCanon
+  m_Name: Glass Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
