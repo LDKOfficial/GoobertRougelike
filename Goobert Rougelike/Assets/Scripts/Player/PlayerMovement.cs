@@ -12,11 +12,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
-    private float timeSinceAnimationStart;
-    
-    [SerializeField]
-    private float animationLength;
-
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -25,16 +20,10 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rigidbody.linearVelocity = movementInput * stats.moveSpeed;
-
-        timeSinceAnimationStart += Time.deltaTime;
         
-        if(movementInput.x != 0 && movementInput.y != 0)
+        if(movementInput.x != 0 || movementInput.y != 0)
         {
-            if(timeSinceAnimationStart >= animationLength)
-            {
                 animator.SetTrigger("Move");
-                timeSinceAnimationStart = 0;
-            }
         }
     }
 

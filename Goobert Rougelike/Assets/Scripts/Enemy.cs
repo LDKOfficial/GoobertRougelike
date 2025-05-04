@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-
+        Debug.Log("Enemy damage taken");
         if (health <= 0f)
         {
             player.gameObject.GetComponent<PlayerStats>().xpPoints += xpAmount;
