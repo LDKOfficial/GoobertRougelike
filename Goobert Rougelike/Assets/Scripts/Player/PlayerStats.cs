@@ -23,5 +23,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField]
     public float xpToNextBuff;
 
+    public int level;
+
     public string timeSurvived;
 }

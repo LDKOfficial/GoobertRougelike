@@ -23,6 +23,9 @@ public class HUD : MonoBehaviour
     private Slider xPBar;
 
     [SerializeField]
+    private TextMeshProUGUI level;
+
+    [SerializeField]
     private TextMeshProUGUI attackSpeed; 
 
     [SerializeField]
@@ -41,6 +44,7 @@ public class HUD : MonoBehaviour
         attackSpeed.text = $"{stats.attackSpeed}";
         attackDamage.text = $"{stats.damage}";
         moveSpeed.text = $"{stats.moveSpeed}";
+        level.text = $"{stats.level}";
     }
 
     private void UpdateTimer()

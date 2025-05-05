@@ -27,6 +27,9 @@ public class GameEnd : MonoBehaviour
     private TextMeshProUGUI timer;
 
     [SerializeField]
+    private TextMeshProUGUI level;
+
+    [SerializeField]
     private TextMeshProUGUI maxHealth;
 
     public void End()
@@ -41,6 +44,7 @@ public class GameEnd : MonoBehaviour
         attackDamage.text = $"{stats.damage}";
         moveSpeed.text = $"{stats.moveSpeed}";
         maxHealth.text = $"{stats.maxHitPoints}";
+        level.text = $"{stats.level}";
 
         hud.SetActive(false);
 

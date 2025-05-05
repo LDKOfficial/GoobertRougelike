@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NUnit.Framework;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -40,6 +41,8 @@ public class BuffGiver : MonoBehaviour
         if (stats.xpPoints >= stats.xpToNextBuff)
         {
             Debug.Log("Level up");
+
+            stats.level++;
 
             uI.SetActive(true);
 
