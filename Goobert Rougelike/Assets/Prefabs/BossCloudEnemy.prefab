@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6830052131325344403}
   - component: {fileID: 5677287871330051996}
   m_Layer: 0
-  m_Name: NormalCloudEnemy
+  m_Name: BossCloudEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7, y: 2.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2802554261367395127, guid: 99a17ee71cf74cc428045b318f8749fc, type: 3}
+  m_Sprite: {fileID: 794276689185042369, guid: 30a9692a3bc6fda4aa3d83fe35f3dc9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -177,10 +177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164f854b03383b944b071070fc751e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  moveSpeed: 2.5
-  damage: 10
-  xpAmount: 100
+  health: 200
+  moveSpeed: 2
+  damage: 30
+  xpAmount: 400
   enemyRigidbody: {fileID: 2292360421139967108}
 --- !u!58 &6830052131325344403
 CircleCollider2D:
@@ -228,7 +228,7 @@ Animator:
   m_GameObject: {fileID: 903121883772915310}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8d3d4b8d5ed0d7c4f8ecb490787a83a5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9b596bb4a2aeacc49992b4fe2c063388, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

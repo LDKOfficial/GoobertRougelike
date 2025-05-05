@@ -30,15 +30,17 @@ public class HUD : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI moveSpeed;  
+
+    public string timerText;
     private void FixedUpdate()
     {
         UpdateTimer();
         UpdateHealthBar();
         UpdateXPBar();
 
-        attackSpeed.text = $"{stats.GetComponent<PlayerStats>().attackSpeed}";
-        attackDamage.text = $"{stats.GetComponent<PlayerStats>().damage}";
-        moveSpeed.text = $"{stats.GetComponent<PlayerStats>().moveSpeed}";
+        attackSpeed.text = $"{stats.attackSpeed}";
+        attackDamage.text = $"{stats.damage}";
+        moveSpeed.text = $"{stats.moveSpeed}";
     }
 
     private void UpdateTimer()
@@ -51,8 +53,8 @@ public class HUD : MonoBehaviour
             secondsCount = 0;
         }
 
-
-        timer.text = $"{minutesCount}:{Convert.ToInt32(secondsCount)}";
+        timerText = $"{minutesCount}:{Convert.ToInt32(secondsCount)}";
+        timer.text = timerText;
     }
 
     private void UpdateHealthBar()
