@@ -19,8 +19,6 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private Rigidbody2D enemyRigidbody;
 
-    private PlayerStats stats;
-
     private GameObject player;
 
     private void Awake()
