@@ -12,6 +12,9 @@ public class BuffGiver : MonoBehaviour
     private PlayerStats stats;
 
     [SerializeField]
+    private PlayerHealthManager playerHealthManager;
+
+    [SerializeField]
     private GameObject uI;
 
     [SerializeField]
@@ -71,7 +74,7 @@ public class BuffGiver : MonoBehaviour
     {
         stats.attackSpeed += buff1.gameObject.GetComponent<Buff>().attackSpeedChange;
         stats.damage += buff1.gameObject.GetComponent<Buff>().damageChange;
-        stats.maxHitPoints += buff1.gameObject.GetComponent<Buff>().maxHitPointsChange;
+        playerHealthManager.MaxHealthChange(buff1.gameObject.GetComponent<Buff>().maxHitPointsChange);
         stats.moveSpeed += buff1.gameObject.GetComponent<Buff>().moveSpeedChange;
         Debug.Log("Button1 pressed");
         Debug.Log(buff1.gameObject.GetComponent<Buff>().name);
@@ -84,7 +87,7 @@ public class BuffGiver : MonoBehaviour
     {
         stats.attackSpeed += buff2.gameObject.GetComponent<Buff>().attackSpeedChange;
         stats.damage += buff2.gameObject.GetComponent<Buff>().damageChange;
-        stats.maxHitPoints += buff2.gameObject.GetComponent<Buff>().maxHitPointsChange;
+        playerHealthManager.MaxHealthChange(buff2.gameObject.GetComponent<Buff>().maxHitPointsChange);
         stats.moveSpeed += buff2.gameObject.GetComponent<Buff>().moveSpeedChange;
         Debug.Log("Button2 pressed");
         Debug.Log(buff2.gameObject.GetComponent<Buff>().name);
@@ -97,7 +100,7 @@ public class BuffGiver : MonoBehaviour
     {
         stats.attackSpeed += buff3.gameObject.GetComponent<Buff>().attackSpeedChange;
         stats.damage += buff3.gameObject.GetComponent<Buff>().damageChange;
-        stats.maxHitPoints += buff3.gameObject.GetComponent<Buff>().maxHitPointsChange;
+        playerHealthManager.MaxHealthChange(buff3.gameObject.GetComponent<Buff>().maxHitPointsChange);
         stats.moveSpeed += buff3.gameObject.GetComponent<Buff>().moveSpeedChange;
         Debug.Log("Button3 pressed");
         Debug.Log(buff3.gameObject.GetComponent<Buff>().name);
