@@ -51,9 +51,9 @@ public class BuffGiver : MonoBehaviour
 
             stats.xpPoints = 0;
             stats.xpToNextBuff = stats.xpToNextBuff * 1.1f;
-            buff1 = buffs[Random.Range(0,buffs.Count - 1)];
-            buff2 = buffs[Random.Range(0,buffs.Count - 1)];
-            buff3 = buffs[Random.Range(0,buffs.Count - 1)];
+            buff1 = buffs[Random.Range(0,buffs.Count)];
+            buff2 = buffs[Random.Range(0,buffs.Count)];
+            buff3 = buffs[Random.Range(0,buffs.Count)];
 
             button1Titel.text = buff1.name;
             button1Description.text = buff1.GetComponent<Buff>().description;
